@@ -20,3 +20,14 @@ CREATE TABLE product_images(
 	sort_order NOT NULL
 );
 
+
+CREATE TABLE categories(
+	id SERIAL PRIMARY KEY,
+	public_id UUID,
+	parent_id INT REFERENCES CATEGORIES(id),
+	name character VARCHAR(100),
+	slug character VARCHAR(100)
+	image_url text ,
+	sort_order INT,
+	is_active boolean
+);
