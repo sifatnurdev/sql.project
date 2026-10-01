@@ -26,7 +26,7 @@ CREATE TABLE categories(
 	public_id UUID,
 	parent_id INT REFERENCES categories(id),
 	name character VARCHAR(100),
-	slug character VARCHAR(100)
+	slug character VARCHAR(100),
 	image_url TEXT ,
 	sort_order INT,
 	is_active BOOLEAN
