@@ -24,7 +24,7 @@ CREATE TABLE product_images(
 CREATE TABLE categories(
 	id SERIAL PRIMARY KEY,
 	public_id UUID,
-	parent_id INT REFERENCES CATEGORIES(id),
+	parent_id INT REFERENCES categories(id),
 	name character VARCHAR(100),
 	slug character VARCHAR(100)
 	image_url text ,
