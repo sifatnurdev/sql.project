@@ -10,3 +10,13 @@ CREATE TABLE users(
 	created_at TIMESTAMPTZ NOT NULL,
 	updated_at TIMESTAMPTZ NOT NULL
 );
+
+CREATE TABLE product_images(
+	id serial primary key,
+	public_id uuid, 
+	product_id INT REFERENCES products(id),
+	url text NOT NULL,
+	alt_text NOT NULL,
+	sort_order NOT NULL
+);
+
