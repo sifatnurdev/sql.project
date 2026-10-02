@@ -31,3 +31,19 @@ CREATE TABLE categories(
 	sort_order INT,
 	is_active BOOLEAN
 );
+
+
+CREATE TABLE products(
+	id SERIAL PRIMARY KEY,
+	public_id UUID,
+	category_id INT REFERENCES categories(id),
+	name character VARCHAR(100),
+	slug character VARCHAR(100),
+	short_description character VARCHAR(100),
+	description TEXT,
+	benefits TEXT[],
+	is_featured BOOLEAN,
+	is_active BOOLEAN,
+	created_at TIMESTAMPTZ NOT NULL,
+	updated_at TIMESTAMPTZ NOT NULL,	
+);
