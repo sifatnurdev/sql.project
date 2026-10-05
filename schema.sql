@@ -17,7 +17,7 @@ CREATE TABLE product_images(
 	product_id INT REFERENCES products(id),
 	url TEXT NOT NULL,
 	alt_TEXT NOT NULL,
-	sort_order NOT NULL
+	sort_order INT
 );
 
 
